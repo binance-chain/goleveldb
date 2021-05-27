@@ -25,14 +25,14 @@ import (
 
 	"github.com/onsi/gomega"
 
-	"github.com/btcsuite/goleveldb/leveldb/comparer"
-	"github.com/btcsuite/goleveldb/leveldb/errors"
-	"github.com/btcsuite/goleveldb/leveldb/filter"
-	"github.com/btcsuite/goleveldb/leveldb/iterator"
-	"github.com/btcsuite/goleveldb/leveldb/opt"
-	"github.com/btcsuite/goleveldb/leveldb/storage"
-	"github.com/btcsuite/goleveldb/leveldb/testutil"
-	"github.com/btcsuite/goleveldb/leveldb/util"
+	"github.com/binance-chain/goleveldb/leveldb/comparer"
+	"github.com/binance-chain/goleveldb/leveldb/errors"
+	"github.com/binance-chain/goleveldb/leveldb/filter"
+	"github.com/binance-chain/goleveldb/leveldb/iterator"
+	"github.com/binance-chain/goleveldb/leveldb/opt"
+	"github.com/binance-chain/goleveldb/leveldb/storage"
+	"github.com/binance-chain/goleveldb/leveldb/testutil"
+	"github.com/binance-chain/goleveldb/leveldb/util"
 )
 
 func tkey(i int) []byte {
@@ -515,7 +515,7 @@ func truno(t *testing.T, o *opt.Options, f func(h *dbHarness)) {
 				if o == nil {
 					o = &opt.Options{
 						DisableLargeBatchTransaction: true,
-						Filter: testingBloomFilter,
+						Filter:                       testingBloomFilter,
 					}
 				} else {
 					old := o

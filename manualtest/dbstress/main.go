@@ -19,12 +19,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/btcsuite/goleveldb/leveldb"
-	"github.com/btcsuite/goleveldb/leveldb/errors"
-	"github.com/btcsuite/goleveldb/leveldb/opt"
-	"github.com/btcsuite/goleveldb/leveldb/storage"
-	"github.com/btcsuite/goleveldb/leveldb/table"
-	"github.com/btcsuite/goleveldb/leveldb/util"
+	"github.com/binance-chain/goleveldb/leveldb"
+	"github.com/binance-chain/goleveldb/leveldb/errors"
+	"github.com/binance-chain/goleveldb/leveldb/opt"
+	"github.com/binance-chain/goleveldb/leveldb/storage"
+	"github.com/binance-chain/goleveldb/leveldb/table"
+	"github.com/binance-chain/goleveldb/leveldb/util"
 )
 
 var (
@@ -165,7 +165,7 @@ func (ts *testingStorage) scanTable(fd storage.FileDesc, checksum bool) (corrupt
 
 	o := &opt.Options{
 		DisableLargeBatchTransaction: true,
-		Strict: opt.NoStrict,
+		Strict:                       opt.NoStrict,
 	}
 	if checksum {
 		o.Strict = opt.StrictBlockChecksum | opt.StrictReader

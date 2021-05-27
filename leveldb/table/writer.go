@@ -12,11 +12,11 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/btcsuite/goleveldb/leveldb/comparer"
-	"github.com/btcsuite/goleveldb/leveldb/filter"
-	"github.com/btcsuite/goleveldb/leveldb/opt"
-	"github.com/btcsuite/goleveldb/leveldb/util"
-	"github.com/btcsuite/snappy-go"
+	"github.com/binance-chain/goleveldb/leveldb/comparer"
+	"github.com/binance-chain/goleveldb/leveldb/filter"
+	"github.com/binance-chain/goleveldb/leveldb/opt"
+	"github.com/binance-chain/goleveldb/leveldb/util"
+	"github.com/binance-chain/snappy-go"
 )
 
 func sharedPrefixLen(a, b []byte) int {

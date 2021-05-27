@@ -7,7 +7,7 @@
 package leveldb
 
 import (
-	"github.com/btcsuite/goleveldb/leveldb/errors"
+	"github.com/binance-chain/goleveldb/leveldb/errors"
 )
 
 // Common errors.
